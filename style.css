@@ -1,0 +1,158 @@
+/* Background Image */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    transition: 0.3s;
+}
+
+/* Blur Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    z-index: -1;
+}
+
+/* Container */
+.container {
+    width: 420px;
+    background: rgba(255,255,255,0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: #ff4b5c;
+}
+
+/* Form */
+form {
+    display: flex;
+    margin-top: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    outline: none;
+}
+
+input:focus {
+    border-color: #6c63ff;
+}
+
+/* Add Button */
+.add-btn {
+    margin-left: 10px;
+    background: linear-gradient(45deg, #ff4b5c, #ff9068);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.stats span {
+    font-size: 18px;
+}
+
+#totalCount { color: #6c63ff; }
+#completedCount { color: #00c853; }
+#pendingCount { color: #ff3d00; }
+
+/* Filters */
+.filters {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.filters button {
+    margin: 5px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filters button.active {
+    background: #6c63ff;
+    color: white;
+}
+
+/* Task List */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background: linear-gradient(45deg, #6c63ff, #42a5f5);
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+li:hover {
+    transform: translateY(-3px);
+}
+
+.completed {
+    text-decoration: line-through;
+    background: linear-gradient(45deg, #00c853, #64dd17);
+}
+
+/* Delete Button */
+.delete-btn {
+    background: #ff3d00;
+    border: none;
+    padding: 6px 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Dark Mode */
+body.dark {
+    background: #121212;
+}
+
+body.dark .container {
+    background: #1e1e1e;
+    color: white;
+}
